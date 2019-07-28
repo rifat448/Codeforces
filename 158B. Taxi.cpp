@@ -62,27 +62,26 @@ void seive(){for(int i=2;i<10000001;i++){if(mark[i]==false){prime.pb(i);for(int 
 ll mark[200];
 int main()
 {
-    int n,i,a,b,c,d,t;
-    a=b=c=d=t=0;
+    ll n,i,x=0,y=0,z=0,m=0,t=0;
     cin>>n;
-    int ar[n];
+    ll ar[n];
     for(i=0;i<n;i++)
     {
         cin>>ar[i];
-        if(ar[i]==1)a++;
-        else if(ar[i]==2)b++;
-        else if(ar[i]==3)c++;
-        else d++;
+        if(ar[i]==1)x++;
+        else if(ar[i]==2)y++;
+        else if(ar[i]==3)z++;
+        else m++;
     }
-    t+=d;
-    t+=c;
-    a=a-c;
-    a=(a<0)?0:a;
-    t+=b/2+b%2;
-    a=a-2*(b%2);
-    if(a>0)
-        t+=a/4;
-    if(a%4>0)
+    t+=m;
+    t+=z;
+    x=x-z;
+    x=(x<0)?0:x;
+    t+=y/2+y%2;
+    x=x-2*(y%2);
+    if(x>0)
+        t+=x/4;
+    if(x%4>0)
         t+=1;
     cout<<t<<endl;
 }
